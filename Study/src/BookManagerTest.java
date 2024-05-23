@@ -4,7 +4,7 @@ public class BookManagerTest {
 	
 	public void testAddBook(List<Book> bookList, int id, String title, String author, int year) {
 		if(bookList.contains(new Book(id,title,author,year))) {
-			System.out.println("해당 ID(" + id + ") 는 이미 존재합니다.");
+			System.out.println("해당 ID(" + id + ") 는 이미 존재합니다!");
 			return;
 		} else {
 			bookList.add(new Book(id, title, author, year));
