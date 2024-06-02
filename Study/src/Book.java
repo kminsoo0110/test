@@ -1,4 +1,4 @@
-public class Book{
+public class Book implements Comparable<Book>{
 		int id;
 		String title;
 		String author;
@@ -23,5 +23,10 @@ public class Book{
 		public boolean equals(Object obj) {
 			Book tempBook = (Book)obj;
 			return this.id == tempBook.id;
+		}
+
+		@Override
+		public int compareTo(Book o) {
+			return this.id - o.id; // 오름차순
 		}
 	}

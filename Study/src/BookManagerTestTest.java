@@ -31,6 +31,7 @@ class BookManagerTestTest {
 	@Test
 	@Order(2)
 	void testTestSearchBook() {
+		System.out.println();
 		Junit.testAddBook(bookList,1,"자바 기초","Jane",2021);
 		Junit.testAddBook(bookList,2,"소프트웨어 공학","Tom",2014);
 		Junit.testAddBook(bookList,3,"분산 컴퓨팅","Yoon",2024);
@@ -44,11 +45,26 @@ class BookManagerTestTest {
 	@Test
 	@Order(3)
 	void testTestRemoveBook() {
+		System.out.println();
 		Junit.testAddBook(bookList,1,"자바 기초","Jane",2021);
 		Junit.testAddBook(bookList,2,"소프트웨어 공학","Tom",2014);
 		Junit.testRemoveBook(bookList, 1);
 		Junit.testRemoveBook(bookList, 1);
 		Junit.testSearchBook(bookList, 1);
+		//fail("Not yet implemented");
+	}
+	
+	@Test
+	@Order(4)
+	void testTestBinarySearch() {
+		System.out.println();
+		Junit.testAddBook(bookList,1,"자바 기초","Jane",2021);
+		Junit.testAddBook(bookList,2,"소프트웨어 공학","Tom",2014);
+		Junit.testAddBook(bookList,3,"분산 컴퓨팅","Yoon",2024);
+		Junit.testBinarySearch(bookList, 1);
+		Junit.testBinarySearch(bookList, 2);
+		Junit.testBinarySearch(bookList, 3);
+		Junit.testBinarySearch(bookList, 4);
 		//fail("Not yet implemented");
 	}
 
