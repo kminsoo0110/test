@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 
 public class BookManagerTest {
@@ -15,7 +16,7 @@ public class BookManagerTest {
 	public void testSearchBook(List<Book> bookList, int id) {
 		if(bookList.contains(new Book(id,"","",0))) {
 			int idx = bookList.indexOf(new Book(id,"","",0));
-			System.out.println("검색 결과:");
+			System.out.print("검색 결과:");
 			bookList.get(idx).show();
 		} else {
 			System.out.println("검색된 도서가 없습니다.");
@@ -32,6 +33,19 @@ public class BookManagerTest {
 		} else {
 			System.out.println("해당 ID(" + id + ")의 도서를 찾을 수 없습니다.");
 			return;
+		}
+	}
+	
+	public void testBinarySearch(List<Book> bookList, int id) {
+		Collections.sort(bookList); // 이진탐색 전 정렬
+		
+		int idx = Collections.binarySearch(bookList,new Book(id,"","",0));
+		
+		if(idx < 0) {
+			System.out.println("해당 ID(" + id + ")의 도서를 찾을 수 없습니다.");
+		} else {
+			System.out.print("검색 결과: ");
+			bookList.get(idx).show();
 		}
 	}
 }
