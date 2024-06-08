@@ -67,6 +67,8 @@ class BookManagerTestTest {
 		Junit.testBinarySearch(bookList, 3);
 		Junit.testBinarySearch(bookList, 4);
 		Junit.testBinarySearch(bookList, 5);
+		Junit.testRemoveBook(bookList, 5);
+		Junit.testBinarySearch(bookList, 5);
 		//fail("Not yet implemented");
 	}
 
